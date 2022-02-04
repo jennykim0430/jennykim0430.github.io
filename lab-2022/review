@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>  Jenny's Website</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1> <font face="monaco" color="#ff7a59"> Jenny's Core 2: Interaction Archive </h1>
 
+	<p1> Tools to Take Notes: </p1>
+
+	<ul>
+  <li>GoodNotes : Ipad</li>
+  <li>Google Drive</li>
+  <li>Desktop Memo</li>
+</ul>  
+	
+	
+
+	<img class="googlephoto" src="googlephoto.jpg" alt=""
+	width="800px">
+	<h3>Google drive is my favorite place to keep photos. 
+	It is easy to organize and hilights memories from the past.</h3> 
+	<h4>Digital Archives</h4>
+<form>
+<select name = "dropdown">
+<option value = "GoodNotes : Ipad" required> GoodNotes : Ipad</option>
+<option value = "Google Drive" required> Google Drive</option>
+<option value = "Desktop Memo" required>Desktop Memo</option>
+
+</select>
+</form>
+
+	<h5> Physical Archives</h5>
+	<form>
+<select name = "dropdown">
+<option value = "Pen and Paper" required> Pen and Paper</option>
+<option value = "Diary" required> Diary</option>
+<option value = "Sticky Paper Notes" required>Sticky Paper Notes</option>
+
+</select>
+</form>
+
+<h4>External Services for Organization</h4>
+
+	<ul>
+  <li> <mark {
+  background-color: yellow;
+	}> Discord</li>
+  <li>Canvas</li>
+  <li> <mark {
+  background-color: yellow;
+	}> Notion</li>
+  <li> <mark {
+  background-color: yellow;
+	}> Kakao Album</li>
+</ul>  
+
+
+
+	
