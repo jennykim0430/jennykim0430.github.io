@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Barriecito', cursive;
+}
+
+h1 {
+    font-family: 'Barriecito', cursive;
+    font-size: 200px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+h2 {
+    font-family: 'Barriecito', cursive;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+}
+
+p {
+    font-family: sans-serif;
+
+}
+
+@media screen and (min-width: 480px) {
+    body {
+        background-color: black;
+    }
+
+    h1 {
+        font-family: 'Barriecito', cursive;
+        color: #fff;
+        font-size: 25px; 
+    }
+
+    h2 {
+        color: #12AD2B;
+    }
+
+    p {
+        font-size: 60px;
+        color: #FFF380;
+        margin: 20px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: red;
+    }
+
+    h1 {
+        font-family: 'Wata';
+        color: #7FFFD4;
+        font-size: 40px; 
+    }
+
+    h2 {
+        color: #12AD2B;
+    }
+
+    p {
+        font-size: 40px;
+        color: #5C3317;
+        margin: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: #97C29A;
+    }
+
+    h1 {
+        font-family: 'Roboto Serif', sans-serif;
+        color: #000000 ;
+        font-size: 40px; 
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        color: #12AD2B;
+    }
+
+    p {
+        font-size: 30px;
+        color: black;
+        margin: 30px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: pink;
+    }
+
+    h1 {
+        font-family: 'Barriecito', cursive;
+        color: #3A3B3C;
+        font-size: 100px; 
+    }
+
+    h2 {
+        color: #48C5C8  ;
+    }
+
+    p {
+        font-size: 25px;
+        color: white;
+        margin: 30px;
+        line-height: 30px;
+    }
+}
