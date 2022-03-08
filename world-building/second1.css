@@ -1,0 +1,82 @@
+body {
+  background-color: black;
+  color: #face30;
+  font-size: 1.2em;
+  font-family: 'Poppins',sans-serif;
+}
+
+
+
+a {
+  color: white;
+  -moz-transition: 0.1s color ease-in;
+  -webkit-transition: 0.1s color ease-in;
+  transition: 0.1s color ease-in;
+}
+
+
+
+.article {
+  margin: 0 auto 3.0em;
+  max-width: 30em;
+}
+
+h1, h3, h4, h5, h6 {
+  color: #face30;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 3.2em;
+}
+
+h2 {
+	color: white;
+  font-size: 2.3em;
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.meta {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+p1 {
+	color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.0em;
+  line-height: 1.5em;
+}
+
+p {
+	
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
+
+.intro {
+  font-size: 1.5em;
+}
+
+blockquote {
+  font-size: 1.3em;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.25em;
+}
+
+blockquote:before {
+  content: '"';
+}
+
+blockquote:after {
+  content: '"';
+}
+
