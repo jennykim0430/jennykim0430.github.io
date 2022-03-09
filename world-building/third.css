@@ -1,0 +1,272 @@
+
+		:root {
+			--bodybackground: transparent;
+			--firstColor: red;
+			--secondColor: #face30;
+			--thirdColor: white;
+			--borderColor: black;
+			--borderColorHover: black;
+			--numberTitleColor: black;
+			--numberTitleColorHover: green;
+		}
+
+		body {
+		    box-sizing: border-box;
+		    margin: 0;
+		    padding: 0;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    min-height: 100vh;
+		    width: 100vw;
+		    font-family: 'Poppins', sans-serif;
+		    flex-wrap: wrap;
+		}
+		
+
+/* create the paw prints */
+.pad {
+    width: 25px;
+    height: 27px;
+    background-color: black;
+    -webkit-border-radius: 63px 63px 63px 63px / 108px     108px 72px 72px;
+    border-radius: 50%  50%  50%  50%  / 60%   60%         40%  40%;
+    display: block;
+    position: absolute;
+}       
+.large {
+   width: 70px;
+   height: 80px;
+   transform: rotate(220deg);
+   left: 100px;
+   top: 50px;
+} 
+.small-1 {
+   transform: rotate(50deg);
+   left: 145px;
+   top: 28px;
+}
+.small-2 {
+   transform: rotate(65deg);
+   left: 174px;
+   top: 50px;
+}  
+.small-3 {
+   transform: rotate(98deg);
+   position: absolute;
+   left: 178px;
+   top: 87px;
+}
+.small-4 {
+   transform: rotate(140deg);
+   position: absolute;
+   left: 158px;
+   top: 117px;
+}
+    
+/* position and animate */
+    
+.paw-print-1 {
+  opacity: 0;
+  position: absolute;
+  left: 75px;
+  top: 900px;
+  transform: rotate(-40deg);
+  -webkit-animation: walk 3s linear infinite;
+  animation: /*keyframe*/walk /*duration*/3s /*transition*/linear /*repeat*/infinite;
+}
+.paw-print-2 {
+  opacity: 0;
+  position: absolute;
+  left: 275px;
+  top: 800px;
+  transform: rotate(-40deg); 
+  -webkit-animation: walk 3s linear infinite 0.25s;
+  animation: walk 3s linear infinite /*delay*/0.25s;
+}
+.paw-print-3 {
+  opacity: 0;
+  position: absolute;
+  left: 375px;
+  top: 650px;
+  transform: rotate(-40deg); 
+  -webkit-animation: walk 3s linear infinite 0.5s;
+  animation: walk 3s linear infinite 0.5s;
+}     
+.paw-print-4 {
+  opacity: 0;
+  position: absolute;
+  left: 575px;
+  top:500px;
+  transform: rotate(-40deg); 
+  -webkit-animation: walk 3s linear infinite 0.75s;
+  animation: walk 3s linear infinite 0.75s;
+}    
+.paw-print-5 {
+  opacity: 0;
+  position: absolute;
+  left: 725px;
+  top: 380px;
+  transform: rotate(-30deg); 
+  -webkit-animation: walk 3s linear infinite 1s;
+  animation: walk 3s linear infinite 1s;
+}   
+.paw-print-6 {
+  opacity: 0;
+  position: absolute;
+  left: 875px;
+  top: 250px;
+  transform: rotate(-30deg); 
+  -webkit-animation: walk 3s linear infinite 1.25s;
+  animation: walk 3s linear infinite 1.25s;
+}   
+.paw-print-7 {
+  opacity: 0;
+  position: absolute;
+  left: 1075px;
+  top: 100px;
+  transform: rotate(-20deg); 
+  -webkit-animation: walk 3s linear infinite 1.5s;
+  animation: walk 3s linear infinite 1.5s;
+}   
+.paw-print-8 {
+  opacity: 0;
+  position: absolute;
+  left: 1150px;
+  top: 50px;
+  transform: rotate(-10deg); 
+  -webkit-animation: walk 3s linear infinite 1.75s;
+  animation: walk 3s linear infinite 1.75s;
+}
+    
+/* walking effect animation keyframes */
+    
+@-webkit-keyframes walk {
+  25%  {opacity: 1;}
+  100% {opacity: 0;}
+}
+    
+@keyframes walk {
+  /* appear */
+  25%  {opacity: 1;}
+  /* disappear */
+  70% {opacity: 0;}
+}
+		body, * {margin: 0;}
+
+		.container {
+			display: block;
+			width: 100%;
+		}
+		h1 {
+  font-size: 4em;
+  text-align: center;
+  margin-top: 30px
+}
+
+
+		.steps-container {
+		    max-width: 1200px;
+		    margin: 0 auto;
+		    background: var(--bodybackground);
+		}
+
+		.steps-container {
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    padding: 35px 10px;
+		    box-sizing: border-box;
+		}
+
+		.steps-container .steps {
+			padding: 4%;
+			width: 25%;
+		}
+
+		.steps-container .steps .steps-item {
+		    border: 6px solid var(--borderColor);
+		    padding: 20px;
+		    padding-left: 20px;
+		    position: relative;
+		    transition: .5s;
+		    border-radius: 0px 40px 0px 40px;
+		    box-shadow: 0px 0px 00px -0px, 0px 0px 0px 0px var(--borderColor);
+		}
+
+		.steps-container .steps:hover .steps-item {
+		    border: 6px solid var(--borderColorHover);
+		    box-shadow: 5px 5px 15px -5px, 5px 5px 0px 0px var(--borderColorHover);
+		}
+
+		.steps-container .steps h3.step-order {
+			color: var(--numberTitleColor);
+		    font-size: 150px;
+		    position: absolute;
+		    top: 0%;
+		    left: -45px;
+		    -webkit-text-stroke-width: 4px;
+		    -webkit-text-stroke-color: white;
+		    font-family: fantasy;
+		    transition: .5s;
+		    transform: translate(0px, 50%) scale(1);
+		}
+
+		/*.steps-container .steps.step-1 h3.step-order {color: red;}
+		.steps-container .steps.step-2 h3.step-order {color: blue;}
+		.steps-container .steps.step-3 h3.step-order {color: green;}*/
+
+		.steps-container .steps:hover h3.step-order {
+			color: black;
+		    left: -55px;
+		    -webkit-text-stroke-width: 4px;
+		    -webkit-text-stroke-color: white;
+		    transform: translate(0px, 50%) scale(1.3);
+		}
+
+		.steps-container .steps .step-content {
+		    border: 3px solid var(--borderColor);
+		    padding: 55px 10px;
+		    padding-left: 20px;
+		    border-radius: 0px 40px 0px 40px;
+		    box-shadow: 0px 0px 0px 0px, 0px 0px 0px 0px var(--borderColor);
+
+		    transition: .3s;
+		}
+
+		.steps-container .steps:hover .step-content {
+		    border: 3px solid var(--borderColorHover);
+		    box-shadow: 5px 5px 15px -5px, 5px 5px 0px 0px var(--borderColorHover);
+		}
+
+		.steps-container .steps .step-content .step-title {
+		    font-size: 20px;
+		    margin-top: 10px;
+		    margin-bottom: 15px;
+
+		    transition: .3s;
+		}
+
+
+
+
+    .steps-box-2.steps-container .steps h3.step-order {
+		    -webkit-text-stroke-color:white;
+      text-shadow: 2px 2px 5px black;
+    }
+
+.steps-container.steps-box-2 .steps .step-content, 
+.steps-container.steps-box-2 .steps .steps-item {
+  border-radius: 0px;
+}
+.steps-container.steps-box-2 .steps:hover .step-content, 
+.steps-container.steps-box-2 .steps .steps-item:hover {
+  border-radius: 0px 40px 0px 40px;
+}
+
+
+
+.steps-container.steps-box-3 .steps .step-content, 
+.steps-container.steps-box-3 .steps .steps-item {
+  border-radius: 40px;
+}
