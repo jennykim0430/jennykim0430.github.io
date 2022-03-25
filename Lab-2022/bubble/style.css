@@ -1,0 +1,34 @@
+html{
+	font-size: 62.5%;
+}
+
+body{
+	margin: 0;
+
+}
+#container{
+	width: 100vw;
+	height: 100vh;
+	background: black;
+}
+.bubble{
+	position: absolute;
+	width: 5rem;
+	height: 5rem;
+	background: white;
+
+	border-radius: 50%;
+	box-shadow: inset -.3rem -.3rem .8rem rgba(106, 198, 198, 0.3);
+	cursor: pointer;
+}
+p{
+	font-family: 'Palette Mosaic', cursive;
+    font-weight: 500px;
+    font-style: normal;
+    color: #face30;
+    font-size: 10em;
+    position: fixed;
+    left: 2em;
+
+
+	}
