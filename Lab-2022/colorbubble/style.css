@@ -1,0 +1,54 @@
+body{ background: #3C3C3D; }
+
+h1{
+  text-align: center;
+  font-family: 'Palette Mosaic', cursive;
+  font-size: 60px;
+  color: #BC270F;
+
+}
+h5{
+  text-align: bottom;
+  font-family: 'Palette Mosaic', cursive;
+  font-size: 30px;
+  color: #BC270F;
+
+}
+div { 
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  left: 50%;
+  top:50%;
+  border: 6px solid #ccc;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  cursor: pointer; 
+  transition: transform .3s, background .3s, border .3s;
+  -webkit-transition: transform .3s, background .3s, border .3s;
+  -moz-transition: transform .3s, background .3s, border .3s, background-image .3s;
+  box-sizing: border-box;
+}
+div:hover { 
+  background: #face30; 
+  background-image: linear-gradient(135deg, red, #face30);
+  background-image: -webkit-linear-gradient(135deg, #face30, red);
+  border: 0px solid; 
+  height: 100px; 
+  width: 100px; 
+  box-shadow: 4px 8px 40px 2px #000;
+  -webkit-box-shadow: 4px 8px 40px 2px #000;
+}
+
+div:active { 
+  margin: 5px 2px;
+  background-image: -webkit-linear-gradient(135deg, red, #face30);
+
+
+}
+
+
+
+
