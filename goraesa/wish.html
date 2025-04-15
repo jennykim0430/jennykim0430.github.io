@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wish Upon a Star</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at bottom, #0d0e25 0%, #1a1a3d 100%);
+      color: white;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      height: 100vh;
+      position: relative;
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .star {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: radial-gradient(circle, white, #fff0f5);
+      border-radius: 50%;
+      opacity: 0.9;
+      box-shadow: 0 0 8px 3px white;
+      animation: twinkle 3s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.7; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #ff69b4;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #ff85c1;
+    }
+
+    .wish-output {
+      margin-top: 30px;
+      font-size: 1.3em;
+      color: #ffd9ec;
+      min-height: 60px;
+    }
+
+    .floating-wish {
+      position: absolute;
+      font-size: 1.2em;
+      color: #fffdd0;
+      opacity: 1;
+      animation: floatUp 3s ease-out forwards;
+      z-index: 3;
+    }
+
+    @keyframes floatUp {
+      0% {
+        bottom: 100px;
+        opacity: 1;
+      }
+      100% {
+        bottom: 90%;
+        opacity: 0;
+        transform: scale(0.6);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" id="starField"></div>
+  <div class="container">
+    <h2>고래사어묵은 소원을 들어드립니다🌟</h2>
+    <input type="text" id="wishInput" placeholder="Type your wish here..." />
+    <button onclick="makeWish()">쏘아올리기 🐋🌠</button>
+    <div class="wish-output" id="wishOutput"></div>
+  </div>
+
+  <script>
+    function makeWish() {
+      const wish = document.getElementById("wishInput").value;
+      const output = document.getElementById("wishOutput");
+
+      if (wish.trim() === "") {
+        output.innerHTML = "🌠 Don't forget to make a real wish!";
+        return;
+      }
+
+      output.innerHTML = `🌟 "${wish}" has been sent to the stars.`;
+      document.getElementById("wishInput").value = "";
+
+      const randomLeft = Math.random() * window.innerWidth;
+      const randomTop = Math.random() * (window.innerHeight * 0.4);
+
+      const floatingWish = document.createElement("div");
+      floatingWish.className = "floating-wish";
+      floatingWish.innerText = wish;
+      floatingWish.style.left = `${randomLeft}px`;
+      document.body.appendChild(floatingWish);
+
+      setTimeout(() => {
+        floatingWish.remove();
+
+        const star = document.createElement("div");
+        star.className = "star";
+        star.style.left = `${randomLeft}px`;
+        star.style.top = `${randomTop}px`;
+        document.getElementById("starField").appendChild(star);
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
